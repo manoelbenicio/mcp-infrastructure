@@ -1,0 +1,350 @@
+{
+  "timestamp": "2025-11-30T17:57:08.689Z",
+  "summary": {
+    "totalServers": 4,
+    "connectedServers": 4,
+    "totalTools": 56,
+    "totalTests": 9,
+    "passedTests": 5,
+    "successRate": 56
+  },
+  "servers": [
+    {
+      "name": "GitHub Official MCP",
+      "connected": true,
+      "toolCount": 26,
+      "tools": [
+        {
+          "name": "create_or_update_file",
+          "description": "Create or update a single file in a GitHub repository"
+        },
+        {
+          "name": "search_repositories",
+          "description": "Search for GitHub repositories"
+        },
+        {
+          "name": "create_repository",
+          "description": "Create a new GitHub repository in your account"
+        },
+        {
+          "name": "get_file_contents",
+          "description": "Get the contents of a file or directory from a GitHub repository"
+        },
+        {
+          "name": "push_files",
+          "description": "Push multiple files to a GitHub repository in a single commit"
+        },
+        {
+          "name": "create_issue",
+          "description": "Create a new issue in a GitHub repository"
+        },
+        {
+          "name": "create_pull_request",
+          "description": "Create a new pull request in a GitHub repository"
+        },
+        {
+          "name": "fork_repository",
+          "description": "Fork a GitHub repository to your account or specified organization"
+        },
+        {
+          "name": "create_branch",
+          "description": "Create a new branch in a GitHub repository"
+        },
+        {
+          "name": "list_commits",
+          "description": "Get list of commits of a branch in a GitHub repository"
+        },
+        {
+          "name": "list_issues",
+          "description": "List issues in a GitHub repository with filtering options"
+        },
+        {
+          "name": "update_issue",
+          "description": "Update an existing issue in a GitHub repository"
+        },
+        {
+          "name": "add_issue_comment",
+          "description": "Add a comment to an existing issue"
+        },
+        {
+          "name": "search_code",
+          "description": "Search for code across GitHub repositories"
+        },
+        {
+          "name": "search_issues",
+          "description": "Search for issues and pull requests across GitHub repositories"
+        },
+        {
+          "name": "search_users",
+          "description": "Search for users on GitHub"
+        },
+        {
+          "name": "get_issue",
+          "description": "Get details of a specific issue in a GitHub repository."
+        },
+        {
+          "name": "get_pull_request",
+          "description": "Get details of a specific pull request"
+        },
+        {
+          "name": "list_pull_requests",
+          "description": "List and filter repository pull requests"
+        },
+        {
+          "name": "create_pull_request_review",
+          "description": "Create a review on a pull request"
+        },
+        {
+          "name": "merge_pull_request",
+          "description": "Merge a pull request"
+        },
+        {
+          "name": "get_pull_request_files",
+          "description": "Get the list of files changed in a pull request"
+        },
+        {
+          "name": "get_pull_request_status",
+          "description": "Get the combined status of all status checks for a pull request"
+        },
+        {
+          "name": "update_pull_request_branch",
+          "description": "Update a pull request branch with the latest changes from the base branch"
+        },
+        {
+          "name": "get_pull_request_comments",
+          "description": "Get the review comments on a pull request"
+        },
+        {
+          "name": "get_pull_request_reviews",
+          "description": "Get the reviews on a pull request"
+        }
+      ],
+      "tests": [
+        {
+          "test": "Search for modelcontextprotocol repositories",
+          "tool": "search_repositories",
+          "success": true,
+          "duration": 860,
+          "responseLength": 37443
+        },
+        {
+          "test": "Search for MCP-related code",
+          "tool": "search_code",
+          "success": false,
+          "error": "MCP error -32603: Invalid input: [{\"code\":\"invalid_type\",\"expected\":\"string\",\"received\":\"undefined\",\"path\":[\"q\"],\"message\":\"Required\"}]"
+        },
+        {
+          "test": "Search for MCP issues",
+          "tool": "search_issues",
+          "success": false,
+          "error": "MCP error -32603: Invalid input: [{\"code\":\"invalid_type\",\"expected\":\"string\",\"received\":\"undefined\",\"path\":[\"q\"],\"message\":\"Required\"}]"
+        }
+      ],
+      "errors": [
+        "Test \"Search for MCP-related code\": MCP error -32603: Invalid input: [{\"code\":\"invalid_type\",\"expected\":\"string\",\"received\":\"undefined\",\"path\":[\"q\"],\"message\":\"Required\"}]",
+        "Test \"Search for MCP issues\": MCP error -32603: Invalid input: [{\"code\":\"invalid_type\",\"expected\":\"string\",\"received\":\"undefined\",\"path\":[\"q\"],\"message\":\"Required\"}]"
+      ],
+      "duration": 2127,
+      "status": "PARTIAL"
+    },
+    {
+      "name": "Puppeteer MCP (Browser Automation)",
+      "connected": true,
+      "toolCount": 7,
+      "tools": [
+        {
+          "name": "puppeteer_navigate",
+          "description": "Navigate to a URL"
+        },
+        {
+          "name": "puppeteer_screenshot",
+          "description": "Take a screenshot of the current page or a specific element"
+        },
+        {
+          "name": "puppeteer_click",
+          "description": "Click an element on the page"
+        },
+        {
+          "name": "puppeteer_fill",
+          "description": "Fill out an input field"
+        },
+        {
+          "name": "puppeteer_select",
+          "description": "Select an element on the page with Select tag"
+        },
+        {
+          "name": "puppeteer_hover",
+          "description": "Hover an element on the page"
+        },
+        {
+          "name": "puppeteer_evaluate",
+          "description": "Execute JavaScript in the browser console"
+        }
+      ],
+      "tests": [
+        {
+          "test": "Navigate to localhost MCP monitor",
+          "tool": "puppeteer_navigate",
+          "success": false,
+          "error": "MCP error -32603: Failed to launch the browser process!\n/home/dataops-lab/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n"
+        },
+        {
+          "test": "Take screenshot",
+          "tool": "puppeteer_screenshot",
+          "success": false,
+          "error": "MCP error -32603: Failed to launch the browser process!\n/home/dataops-lab/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n"
+        }
+      ],
+      "errors": [
+        "Test \"Navigate to localhost MCP monitor\": MCP error -32603: Failed to launch the browser process!\n/home/dataops-lab/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n",
+        "Test \"Take screenshot\": MCP error -32603: Failed to launch the browser process!\n/home/dataops-lab/.cache/puppeteer/chrome/linux-131.0.6778.204/chrome-linux64/chrome: error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n"
+      ],
+      "duration": 999,
+      "status": "PARTIAL"
+    },
+    {
+      "name": "Filesystem MCP",
+      "connected": true,
+      "toolCount": 14,
+      "tools": [
+        {
+          "name": "read_file",
+          "description": "Read the complete contents of a file as text. DEPRECATED: Use read_text_file instead."
+        },
+        {
+          "name": "read_text_file",
+          "description": "Read the complete contents of a file from the file system as text. Handles various text encodings an"
+        },
+        {
+          "name": "read_media_file",
+          "description": "Read an image or audio file. Returns the base64 encoded data and MIME type. Only works within allowe"
+        },
+        {
+          "name": "read_multiple_files",
+          "description": "Read the contents of multiple files simultaneously. This is more efficient than reading files one by"
+        },
+        {
+          "name": "write_file",
+          "description": "Create a new file or completely overwrite an existing file with new content. Use with caution as it "
+        },
+        {
+          "name": "edit_file",
+          "description": "Make line-based edits to a text file. Each edit replaces exact line sequences with new content. Retu"
+        },
+        {
+          "name": "create_directory",
+          "description": "Create a new directory or ensure a directory exists. Can create multiple nested directories in one o"
+        },
+        {
+          "name": "list_directory",
+          "description": "Get a detailed listing of all files and directories in a specified path. Results clearly distinguish"
+        },
+        {
+          "name": "list_directory_with_sizes",
+          "description": "Get a detailed listing of all files and directories in a specified path, including sizes. Results cl"
+        },
+        {
+          "name": "directory_tree",
+          "description": "Get a recursive tree view of files and directories as a JSON structure. Each entry includes 'name', "
+        },
+        {
+          "name": "move_file",
+          "description": "Move or rename files and directories. Can move files between directories and rename them in a single"
+        },
+        {
+          "name": "search_files",
+          "description": "Recursively search for files and directories matching a pattern. The patterns should be glob-style p"
+        },
+        {
+          "name": "get_file_info",
+          "description": "Retrieve detailed metadata about a file or directory. Returns comprehensive information including si"
+        },
+        {
+          "name": "list_allowed_directories",
+          "description": "Returns the list of directories that this server is allowed to access. Subdirectories within these a"
+        }
+      ],
+      "tests": [
+        {
+          "test": "Read package.json",
+          "tool": "read_file",
+          "success": true,
+          "duration": 13,
+          "responseLength": 466
+        },
+        {
+          "test": "List workspace files",
+          "tool": "list_directory",
+          "success": true,
+          "duration": 8,
+          "responseLength": 1748
+        }
+      ],
+      "errors": [],
+      "duration": 1174,
+      "status": "PASS"
+    },
+    {
+      "name": "Memory MCP",
+      "connected": true,
+      "toolCount": 9,
+      "tools": [
+        {
+          "name": "create_entities",
+          "description": "Create multiple new entities in the knowledge graph"
+        },
+        {
+          "name": "create_relations",
+          "description": "Create multiple new relations between entities in the knowledge graph. Relations should be in active"
+        },
+        {
+          "name": "add_observations",
+          "description": "Add new observations to existing entities in the knowledge graph"
+        },
+        {
+          "name": "delete_entities",
+          "description": "Delete multiple entities and their associated relations from the knowledge graph"
+        },
+        {
+          "name": "delete_observations",
+          "description": "Delete specific observations from entities in the knowledge graph"
+        },
+        {
+          "name": "delete_relations",
+          "description": "Delete multiple relations from the knowledge graph"
+        },
+        {
+          "name": "read_graph",
+          "description": "Read the entire knowledge graph"
+        },
+        {
+          "name": "search_nodes",
+          "description": "Search for nodes in the knowledge graph based on a query"
+        },
+        {
+          "name": "open_nodes",
+          "description": "Open specific nodes in the knowledge graph by their names"
+        }
+      ],
+      "tests": [
+        {
+          "test": "Store test knowledge",
+          "tool": "store_memory",
+          "success": true,
+          "duration": 1,
+          "responseLength": 99
+        },
+        {
+          "test": "Retrieve stored knowledge",
+          "tool": "retrieve_memory",
+          "success": true,
+          "duration": 1,
+          "responseLength": 102
+        }
+      ],
+      "errors": [],
+      "duration": 4522,
+      "status": "PASS"
+    }
+  ]
+}

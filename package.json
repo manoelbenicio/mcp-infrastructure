@@ -1,0 +1,20 @@
+{
+  "name": "mcp-infrastructure",
+  "version": "1.0.0",
+  "description": "Complete MCP server infrastructure with testing suite and monitoring dashboard",
+  "keywords": ["mcp", "model-context-protocol", "testing", "monitoring", "infrastructure"],
+  "author": "manoel.benicio@icloud.com",
+  "license": "MIT",
+  "scripts": {
+    "start:backend": "node backend/tmp_rovodev_mcp_http_server.mjs",
+    "start:ws": "node backend/tmp_rovodev_mcp_ws_server.mjs",
+    "start:frontend": "cd frontend && npm run dev",
+    "test": "node tests/tmp_rovodev_mcp_enhanced_test.mjs",
+    "docs": "open docs/MCP_TEST_REPORT_INDEX.md"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.23.0",
+    "express": "^4.18.2",
+    "ws": "^8.18.3"
+  }
+}
